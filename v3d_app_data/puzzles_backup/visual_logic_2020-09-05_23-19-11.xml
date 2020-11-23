@@ -1,0 +1,63 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="init" type="InitTab" active="false" scrollx="530" scrolly="350" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="^Ou22%j$tt1v1L~N^:wI" x="-490" y="-330">
+      <field name="LOAD_COMP_ASSETS">FALSE</field>
+      <field name="FULLSCREEN">TRUE</field>
+      <field name="BKG_TRANSPARENCY">TRUE</field>
+      <field name="PRESERVE_DRAW_BUF">FALSE</field>
+      <field name="FADE_ANNOTATIONS">TRUE</field>
+    </block>
+  </tab>
+  <tab name="main" type="MainTab" active="false" scrollx="553" scrolly="355.22222900390625" scale="1"></tab>
+  <tab name="dpi" type="SecondaryTab" active="true" scrollx="0" scrolly="0" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="controls_ifelse" id="cY1[Us.+;(=E{)}?{-y_" x="110" y="130">
+      <value name="IF0">
+        <block type="logic_negate" id="+K@u|=Ip|/{~~Pf%:sX]">
+          <value name="BOOL">
+            <block type="featureAvailable" id="3]yypfg.~unkN6R)+w#R">
+              <field name="FEATURE">MOBILE</field>
+            </block>
+          </value>
+        </block>
+      </value>
+      <statement name="DO0">
+        <block type="controls_ifelse" id="4|q-hoXC,_%I-W1.A{M}">
+          <value name="IF0">
+            <block type="featureAvailable" id="b.YZIl=w0UP[#^{.lnt]">
+              <field name="FEATURE">RETINA</field>
+            </block>
+          </value>
+          <statement name="DO0">
+            <block type="setScreenScale" id="gx6;rKD)vBlLfIr3,;_1">
+              <value name="FACTOR">
+                <shadow type="math_number">
+                  <field name="NUM">3</field>
+                </shadow>
+                <block type="nativeScreenScale" id="k9D(.B1#y1ASGiW/]z%F"/>
+              </value>
+            </block>
+          </statement>
+          <statement name="ELSE">
+            <block type="setScreenScale" id=";C!;f!*m*P(mvW3]$oG~">
+              <value name="FACTOR">
+                <shadow type="math_number" id="WT71scOG5;c1JO50ztKj">
+                  <field name="NUM">3</field>
+                </shadow>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </statement>
+      <statement name="ELSE">
+        <block type="setScreenScale" id=":#LWsC_?WQ7v-F}n_ZeJ">
+          <value name="FACTOR">
+            <shadow type="math_number" id="n}]m`nCiRNcSz+0HYRUM">
+              <field name="NUM">3</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </tab>
+  <editorsettings viewport-x="720" viewport-y="28" viewport-w="492" viewport-h="388" viewport-hidden="false" toolbox-library-mode="true" toolbox-minimized-mode="false"></editorsettings>
+</xml>
